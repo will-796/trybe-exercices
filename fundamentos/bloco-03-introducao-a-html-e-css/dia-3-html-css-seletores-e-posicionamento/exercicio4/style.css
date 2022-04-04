@@ -1,0 +1,62 @@
+ol {
+  background-color: yellow;
+}
+
+.impar {
+  text-transform: uppercase;
+}
+
+.par {
+  color: green;
+}
+
+h1,
+h3 {
+  color: red;
+}
+
+h1,
+h3 em {
+  font-size: 40px;
+  border: 1px solid black;
+}
+
+li {
+  font-size: 20px;
+}
+
+li em {
+  font-weight: bold;
+}
+
+.blue {
+  color: blue;
+}
+
+.pink {
+  color: pink;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+#stackOverflow:hover {
+  color: orange;
+}
+#W3Schools:hover {
+  color: #04aa6d;
+}
+#MDN:hover {
+  color: #15141a;
+}
+#devDocs:hover {
+  color: yellow;
+}
+#trybe:hover {
+  color: #2fc18c;
+}
