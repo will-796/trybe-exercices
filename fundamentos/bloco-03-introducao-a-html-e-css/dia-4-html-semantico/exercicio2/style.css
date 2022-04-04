@@ -1,0 +1,80 @@
+/* *{
+  border: 1px red solid;
+} */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ece1c3;
+}
+
+header {
+  height: 50px;
+  background-color: #063940;
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+}
+
+h1{
+  margin: 0;
+}
+
+nav {
+  background-color: #195e63;
+}
+
+nav a {
+  margin-right: 20px;
+  display: inline;
+}
+
+article h1 {
+  text-align: center;
+  background-color: #3e838c;
+}
+
+ul{
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+article h1 {
+  margin-bottom: 50px ;
+}
+
+.conteudo {
+  text-align: center;
+}
+
+.conteudo section {
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+  /* text-align: center; */
+}
+
+
+img {
+  width: 300px;
+}
+
+.referencias {
+  display: block;
+  text-align: center;
+  margin: 100px;
+}
+
+.fatos {
+  display: inline;
+}
+
+section a {
+  display: block;
+}
+
+footer {
+  text-align: center;
+}
