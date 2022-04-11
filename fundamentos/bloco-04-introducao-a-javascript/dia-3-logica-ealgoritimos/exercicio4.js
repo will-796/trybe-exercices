@@ -17,15 +17,11 @@ for (let i = 1; i <= range; i += 1) {
     primos.push(i);
   }
 }
-
-for (let i = 0; i < array.length; i++) {
-  const element = array[i];
-  
-}
+console.log(primos);
 
 //verificar o maior numero primo
 let maiorPrimo = primos[0];
-for (let k = 0; k < primos.length; k++) {
+for (let k = 0; k < range; k++) {
   if (maiorPrimo < primos[k]) {
     maiorPrimo = primos[k];
   }
