@@ -1,19 +1,18 @@
 let n = 5;
-let i,j,k,a,b
+let metade = (n + 1) / 2;
+let direita = metade
+let esquerda  = metade
 
-for (let i = 0; i < n; i++) {
+for (let i = 0; i <= metade; i++) {
   let linha = "";
-  if (i < n / 2) {
-    for (let a = i; a < n/2-1; a++) {
-      linha += " ";
-    }
-    for (let b = 0; b < 2*i+1; b++){
+  for (let j = 0; j <= n; j++) {
+    if (j < direita && j > esquerda) {
       linha += "*";
-    }
-  } else {
-    for (let k = 0; k < n; k++) {
+    } else {
       linha += " ";
     }
   }
+  direita+=1
+  esquerda-=1
   console.log(linha);
 }
