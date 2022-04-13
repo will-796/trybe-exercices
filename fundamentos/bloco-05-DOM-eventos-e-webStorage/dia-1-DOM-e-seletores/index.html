@@ -60,13 +60,21 @@
         mainContent[0].style.backgroundColor = color;
       }
       changeColorMainContent("rgb(76,164,109)");
+
       // 3. Crie uma função que mude a cor do quadrado vermelho para branco.
       function changeColorCenterContent(color) {
         const centerContent = document.getElementsByClassName("center-content");
         centerContent[0].style.backgroundColor = color;
       }
       changeColorCenterContent("white");
+
       // 4. Crie uma função que corrija o texto da tag <h1>.
+      function changeH1Text(text) {
+        const title = document.getElementsByTagName("h1")[0];
+        title.innerText = text;
+      }
+      changeH1Text("Exercício 5.1 - JavaScript");
+
       // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
       // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
     </script>
