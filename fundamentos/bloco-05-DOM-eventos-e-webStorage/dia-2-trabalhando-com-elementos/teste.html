@@ -65,11 +65,14 @@
       body.appendChild(createdH1);
 
       // 2. Adicione a tag main com a classe main-content como filho da tag body ;
-      const createdMain = document.createElement('main')
-      createdMain.className = 'main-content'
-      body.appendChild(createdMain)
+      const createdMain = document.createElement("main");
+      createdMain.className = "main-content";
+      body.appendChild(createdMain);
 
       // 3. Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+      const createdSection = document.createElement("section");
+      createdSection.className = "center-content";
+      body.lastElementChild.appendChild(createdSection);
       // 4. Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
       // 5. Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
       // 6. Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
