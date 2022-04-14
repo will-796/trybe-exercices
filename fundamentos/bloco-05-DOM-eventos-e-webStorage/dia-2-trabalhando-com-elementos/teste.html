@@ -58,8 +58,8 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
-      function createTag(tag){
-        return document.createElement(tag)
+      function createTag(tag) {
+        return document.createElement(tag);
       }
       // 1. Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
       const createdH1 = createTag("h1");
@@ -80,33 +80,43 @@
       // 4. Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
       const createdP = createTag("p");
       createdP.innerText = "xablau";
-      document.querySelector('section').appendChild(createdP);
+      document.querySelector("section").appendChild(createdP);
 
       // 5. Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
-      const createdSection2 = createTag('section')
-      createdSection2.className = 'left-content'
-      body.lastElementChild.appendChild(createdSection2)
+      const createdSection2 = createTag("section");
+      createdSection2.className = "left-content";
+      body.lastElementChild.appendChild(createdSection2);
 
       // 6. Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
-      const createdSection3 = createTag('section')
-      createdSection3.className = 'right-content'
-      body.lastElementChild.appendChild(createdSection3)
+      const createdSection3 = createTag("section");
+      createdSection3.className = "right-content";
+      body.lastElementChild.appendChild(createdSection3);
 
       // 7. Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
-      const createdImage = createTag('img')
-      createdImage.src = "https://picsum.photos/200"
-      createdImage.className = "small-image"
-      document.querySelector('.left-content').appendChild(createdImage)
+      const createdImage = createTag("img");
+      createdImage.src = "https://picsum.photos/200";
+      createdImage.className = "small-image";
+      document.querySelector(".left-content").appendChild(createdImage);
       // 8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
-      const array = ['um','dois','três','quatro','cinco','seis','sete','oito','nove','dez',]
-      const createdUl = createTag('ul')
-      const right = document.querySelector('.right-content')
-      right.appendChild(createdUl)
+      const array = [
+        "um",
+        "dois",
+        "três",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+        "nove",
+        "dez",
+      ];
+      const createdUl = createTag("ul");
+      const right = document.querySelector(".right-content");
+      right.appendChild(createdUl);
       for (const iterator of array) {
-        const createdLi = createTag("li")
-        createdLi.innerText =iterator
-        right.firstElementChild.appendChild(createdLi)
-
+        const createdLi = createTag("li");
+        createdLi.innerText = iterator;
+        right.firstElementChild.appendChild(createdLi);
       }
 
       // 9. Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
