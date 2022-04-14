@@ -58,28 +58,35 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
+      function createTag(tag){
+        return document.createElement(tag)
+      }
       // 1. Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
-      const createdH1 = document.createElement("h1");
+      const createdH1 = createTag("h1");
       const body = document.querySelector("body");
       createdH1.innerHTML = "Exercício 5.2 - JavaScript DOM";
       body.appendChild(createdH1);
 
       // 2. Adicione a tag main com a classe main-content como filho da tag body ;
-      const createdMain = document.createElement("main");
+      const createdMain = createTag("main");
       createdMain.className = "main-content";
       body.appendChild(createdMain);
 
       // 3. Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
-      const createdSection = document.createElement("section");
+      const createdSection = createTag("section");
       createdSection.className = "center-content";
       body.lastElementChild.appendChild(createdSection);
 
       // 4. Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
-      const createdP = document.createElement("p");
+      const createdP = createTag("p");
       createdP.innerText = "xablau";
       document.querySelector('section').appendChild(createdP);
 
       // 5. Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+      const createdSection2 = createTag('section')
+      createdSection2.className = 'left-content'
+      body.lastElementChild.appendChild(createdSection2)
+
       // 6. Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
       // 7. Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
       // 8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
