@@ -63,6 +63,7 @@
       }
       // 1. Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
       const createdH1 = createTag("h1");
+      createdH1.className = "title"
       const body = document.querySelector("body");
       createdH1.innerHTML = "Exercício 5.2 - JavaScript DOM";
       body.appendChild(createdH1);
@@ -120,12 +121,32 @@
       }
 
       // 9. Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
-      const main = document.querySelector('main')
-      for (let index = 0; index < 3; index+=1) {
-        const h3 = createTag('h3')
-        main.appendChild(h3)      
+      const main = document.querySelector("main");
+      for (let index = 0; index < 3; index += 1) {
+        const h3 = createTag("h3");
+        h3.className = "description"
+        main.appendChild(h3);
       }
 
+      //       Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
+      //1. Adicione a classe title na tag h1 criada;
+      //2. Adicione a classe description nas 3 tags h3 criadas;
+      //3. Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+      const sectionLeftContent = document.querySelector(".left-content")
+      main.removeChild(sectionLeftContent)
+
+      //4. Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
+      right.style.margin = "auto"
+
+      //5. Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+      const sectionCenterContent = document.querySelector('.center-content')
+      sectionCenterContent.style.backgroundColor = "pink"
+      
+      //6. Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+      for (let index = 0;  index<2; index+=1){
+        right.firstChild.lastChild.remove();
+      }
+      
     </script>
   </body>
 </html>
