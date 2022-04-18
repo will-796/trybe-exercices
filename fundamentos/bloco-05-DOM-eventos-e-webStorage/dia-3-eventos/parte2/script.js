@@ -97,3 +97,19 @@ btnFriday.addEventListener("click", function () {
     btnFriday.className = "active";
   }
 });
+
+const classDay = document.getElementsByClassName('day')
+
+for (const day of classDay) {
+  day.addEventListener("mouseenter", function(event){
+    event.target.style.transform = "scale(1.5)"
+  })
+}
+
+for (const day of classDay) {
+  day.addEventListener("mouseleave", function(event){
+    event.target.style.transform = "scale(1)"
+  })
+}
+
+
