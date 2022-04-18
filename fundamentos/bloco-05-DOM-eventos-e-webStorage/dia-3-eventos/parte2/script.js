@@ -117,8 +117,18 @@ const tasks = document.querySelector(".my-tasks");
 const buttonTask = document.querySelector("#btn-add");
 
 buttonTask.addEventListener("click", function () {
+  taskColor('red')
   const spanInput = document.createElement("span");
   spanInput.innerText = input.value;
   tasks.appendChild(spanInput);
-  console.log("teste");
 });
+
+function taskColor(cor){
+  const div = document.createElement('div')
+  div.style.backgroundColor = cor
+  div.className = "task"
+  tasks.appendChild(div)
+}
+
+
+
