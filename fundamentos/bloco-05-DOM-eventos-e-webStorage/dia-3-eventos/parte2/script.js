@@ -98,18 +98,27 @@ btnFriday.addEventListener("click", function () {
   }
 });
 
-const classDay = document.getElementsByClassName('day')
+const classDay = document.getElementsByClassName("day");
 
 for (const day of classDay) {
-  day.addEventListener("mouseenter", function(event){
-    event.target.style.transform = "scale(1.5)"
-  })
+  day.addEventListener("mouseenter", function (event) {
+    event.target.style.transform = "scale(1.5)";
+  });
 }
 
 for (const day of classDay) {
-  day.addEventListener("mouseleave", function(event){
-    event.target.style.transform = "scale(1)"
-  })
+  day.addEventListener("mouseleave", function (event) {
+    event.target.style.transform = "scale(1)";
+  });
 }
 
+const input = document.querySelector("input");
+const tasks = document.querySelector(".my-tasks");
+const buttonTask = document.querySelector("#btn-add");
 
+buttonTask.addEventListener("click", function () {
+  const spanInput = document.createElement("span");
+  spanInput.innerText = input.value;
+  tasks.appendChild(spanInput);
+  console.log("teste");
+});
