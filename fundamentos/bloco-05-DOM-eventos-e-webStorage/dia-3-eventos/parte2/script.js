@@ -23,3 +23,15 @@ for (const index in dezDaysList) {
   li.innerText = dezDaysList[index]
   days.appendChild(li)
 }
+
+// Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados"
+
+function addButton(buttonText){
+  const buttonsContainer = document.querySelector('.buttons-container')
+  const button = document.createElement('button')
+  button.id = "btn-holiday"
+  button.innerText = buttonText
+  buttonsContainer.appendChild(button)
+}
+
+addButton("Feriados")
