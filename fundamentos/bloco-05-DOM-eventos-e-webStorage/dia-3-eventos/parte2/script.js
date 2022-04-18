@@ -52,15 +52,15 @@ for (const index in dezDaysList) {
 
 // Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados"
 
-function addButton(buttonText) {
+function addButton(buttonText, id) {
   const buttonsContainer = document.querySelector(".buttons-container");
   const button = document.createElement("button");
-  button.id = "btn-holiday";
+  button.id = id;
   button.innerText = buttonText;
   buttonsContainer.appendChild(button);
 }
 
-addButton("Feriados");
+addButton("Feriados", "btn-holiday");
 
 // Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
 
@@ -77,5 +77,23 @@ btnHoliday.addEventListener("click", function () {
       li.style.backgroundColor = "rgb(238,238,238)";
     }
     btnHoliday.className = "active";
+  }
+});
+
+addButton("Sexta-feira", "btn-friday");
+
+const btnFriday = document.querySelector("#btn-friday");
+const fridays = document.getElementsByClassName("friday");
+btnFriday.addEventListener("click", function () {
+  if (btnFriday.className === "active") {
+    for (const li of fridays) {
+      li.style.backgroundColor = "red";
+    }
+    btnFriday.className = "";
+  } else {
+    for (const li of fridays) {
+      li.style.backgroundColor = "rgb(238,238,238)";
+    }
+    btnFriday.className = "active";
   }
 });
