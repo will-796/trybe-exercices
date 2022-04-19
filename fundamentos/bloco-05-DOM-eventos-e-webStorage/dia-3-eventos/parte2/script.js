@@ -112,23 +112,53 @@ for (const day of classDay) {
   });
 }
 
-const input = document.querySelector("input");
 const tasks = document.querySelector(".my-tasks");
 const buttonTask = document.querySelector("#btn-add");
 
-buttonTask.addEventListener("click", function () {
-  taskColor('red')
-  const spanInput = document.createElement("span");
-  spanInput.innerText = input.value;
-  tasks.appendChild(spanInput);
-});
+const spanInput = document.createElement("span");
+spanInput.innerText = "cozinhar:";
+tasks.appendChild(spanInput);
 
-function taskColor(cor){
-  const div = document.createElement('div')
-  div.style.backgroundColor = cor
-  div.className = "task"
-  tasks.appendChild(div)
+const div = document.createElement("div");
+div.style.backgroundColor = "blue";
+div.addEventListener("click", function (event) {
+  event.target.classList.toggle("selected");
+});
+div.className = "task";
+tasks.appendChild(div);
+
+for (const day of classDay) {
+  day.addEventListener("click", function (event) {
+    const divTask = document.querySelector(".task");
+    event.target.classList.toggle("selected");
+    if (
+      day.classList.contains("selected") &&
+      divTask.classList.contains("selected")
+    ) {
+      day.style.color = "blue";
+    } else {
+      day.style.color = "rgb(119,119,119)";
+    }
+  });
 }
 
+const taskInput = document.querySelector("#task-input");
+const btn = document.querySelector("#btn-add");
 
+btn.addEventListener("click", createList);
+taskInput.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        btn.click();
+    }
+});
 
+function createList(event) {
+  const ul = document.querySelector(".task-list");
+  const li = document.createElement("li");
+  if (taskInput.value == "") {
+    alert("n tem nada aehooo");
+  } else {
+    li.innerText = taskInput.value;
+    ul.appendChild(li);
+  }
+}
