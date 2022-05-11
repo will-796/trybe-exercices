@@ -83,6 +83,29 @@ function techList(array, aluno) {
   return answer;
 }
 
+function hydrate(string) {
+  let counter = 0;
+  for (const char of string) {
+    if (
+      char === '1' ||
+      char === '2' ||
+      char === '3' ||
+      char === '4' ||
+      char === '5' ||
+      char === '6' ||
+      char === '7' ||
+      char === '8' ||
+      char === '9'
+    ) {
+      counter += parseInt(char)
+    }
+  }
+  if (counter == 1) {
+    return `${counter} copo de água`
+  }
+  return `${counter} copos de água`;
+}
+
 // implemente seus testes aqui
 
 // implemente seus testes aqui
@@ -94,4 +117,5 @@ module.exports = {
   encode,
   decode,
   techList,
+  hydrate
 };
