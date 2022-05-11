@@ -67,6 +67,22 @@ function decode(string) {
   return newString
 }
 
+function techList(array, aluno) {
+  // seu código aqui
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+  const answer = [];
+  const arraySorted = array.sort();
+  for (const interator of arraySorted) {
+    const obj = { tech: null, name: null };
+    obj.name = aluno;
+    obj.tech = interator;
+    answer.push(obj);
+  }
+  return answer;
+}
+
 // implemente seus testes aqui
 
 // implemente seus testes aqui
@@ -77,4 +93,5 @@ module.exports = {
   myFizzBuzz,
   encode,
   decode,
+  techList,
 };
