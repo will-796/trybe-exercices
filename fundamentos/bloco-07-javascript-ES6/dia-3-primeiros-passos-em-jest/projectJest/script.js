@@ -48,7 +48,7 @@ function encode(string) {
 function decode(string) {
   // seu código aqui
   let newString = "";
-  string.replace()
+  string.replace();
   for (const char of string) {
     if (char === "1") {
       newString += "a";
@@ -64,13 +64,13 @@ function decode(string) {
       newString += char;
     }
   }
-  return newString
+  return newString;
 }
 
 function techList(array, aluno) {
   // seu código aqui
   if (array.length === 0) {
-    return 'Vazio!';
+    return "Vazio!";
   }
   const answer = [];
   const arraySorted = array.sort();
@@ -87,28 +87,70 @@ function hydrate(string) {
   let counter = 0;
   for (const char of string) {
     if (
-      char === '1' ||
-      char === '2' ||
-      char === '3' ||
-      char === '4' ||
-      char === '5' ||
-      char === '6' ||
-      char === '7' ||
-      char === '8' ||
-      char === '9'
+      char === "1" ||
+      char === "2" ||
+      char === "3" ||
+      char === "4" ||
+      char === "5" ||
+      char === "6" ||
+      char === "7" ||
+      char === "8" ||
+      char === "9"
     ) {
-      counter += parseInt(char)
+      counter += parseInt(char);
     }
   }
   if (counter == 1) {
-    return `${counter} copo de água`
+    return `${counter} copo de água`;
   }
   return `${counter} copos de água`;
 }
 
-// implemente seus testes aqui
+const professionalBoard = [
+  {
+    id: "8579-6",
+    firstName: "Ana",
+    lastName: "Gates",
+    specialities: ["UX", "Design"],
+  },
+  {
+    id: "5569-4",
+    firstName: "George",
+    lastName: "Jobs",
+    specialities: ["Frontend", "Redux", "React", "CSS"],
+  },
+  {
+    id: "4456-4",
+    firstName: "Leila",
+    lastName: "Zuckerberg",
+    specialities: ["Context API", "RTL", "Bootstrap"],
+  },
+  {
+    id: "1256-4",
+    firstName: "Linda",
+    lastName: "Bezos",
+    specialities: ["Hooks", "Context API", "Tailwind CSS"],
+  },
+  {
+    id: "9852-2-2",
+    firstName: "Jeff",
+    lastName: "Cook",
+    specialities: ["Ruby", "SQL"],
+  },
+  {
+    id: "4678-2",
+    firstName: "Paul",
+    lastName: "Dodds",
+    specialities: ["Backend"],
+  },
+];
 
-// implemente seus testes aqui
+const searchEmployee = (id) => {
+  const obj = professionalBoard.find((obj) => obj.id === id);
+  obj === undefined ? "id não existe" : null;
+};
+
+console.log(searchEmployee("4678-2"));
 
 module.exports = {
   sum,
@@ -117,5 +159,15 @@ module.exports = {
   encode,
   decode,
   techList,
-  hydrate
+  hydrate,
 };
+
+const average = (arr) => {
+  if (arr.length === 0) return undefined
+  if (arr.some((value) => typeof value === "string")) return undefined
+  const resposta = Math.round(arr.reduce((acc, att) => acc + att) / arr.length);
+  return resposta;
+};
+const teste = [1, 2, 3, 6, 5, 4];
+
+console.log(average(teste));
