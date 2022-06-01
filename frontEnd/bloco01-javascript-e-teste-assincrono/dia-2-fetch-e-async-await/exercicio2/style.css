@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  font-size: 50px;
+  text-align: center;
+}
+
+#table-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+}
+
+body {
+  padding: 10%;
+  background-color: #fff;
+}
+
+#table-container div{
+  padding: 8px;
+  border: 1px black solid;
+  background-color: #f1f1f1;
+}
